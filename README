@@ -33,7 +33,7 @@ kernel toolchain, headers and build system installed. Here is a sample session:
 	make[1]: Leaving directory '/usr/src/linux-4.1.3'
 	$ sudo insmod datto_dev.ko
 	$ cat /dev/datto_char
-	cat: /dev/datto_char: Invalid argumen
+	cat: /dev/datto_char: Invalid argument
 	$ cd ioctl_cmd
 	$ make ioctl_cmd
 	cc -o ioctl_cmd ioctl_cmd.c
@@ -42,6 +42,7 @@ kernel toolchain, headers and build system installed. Here is a sample session:
 	# Wall of text (you want to hit Ctrl+C)
 	$ make clean
 	rm ioctl_cmd
+	$ cd ..
 	$ sudo rmmod datto_char.ko
 	$ make clean
 	make -C /lib/modules/4.1.3/build M=/home/richard/devel/datto_char clean
